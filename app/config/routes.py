@@ -5,24 +5,31 @@
 """
 from system.core.router import routes
 
-routes['default_controller'] = 'InstantTutors'
-routes['GET']['/register'] = 'InstantTutors#register'
-routes['GET']['/login'] = 'InstantTutors#login'
-routes['POST']['/process'] = 'InstantTutors#process'
-routes['GET']['/wall'] = 'InstantTutors#wall'
-routes['POST']['/wall/post'] = 'InstantTutors#postWall'
-routes['GET']['/logout'] = 'InstantTutors#logout'
-routes['GET']['/dashboard'] = 'InstantTutors#dashboard'
-routes['GET']['/profile'] = 'InstantTutors#edit'
-routes['GET']['/profile/<user_id>'] = 'InstantTutors#profile'
-routes['GET']['/requestfriend/<user_id>'] = 'InstantTutors#requestFriend'
-routes['GET']['/acceptfriend/<user_id>'] = 'InstantTutors#acceptFriend'
-routes['GET']['/unfriend/<user_id>'] = 'InstantTutors#unfriend'
-routes['POST']['/process/<user_id>'] = 'InstantTutors#processUser'
-routes['GET']['/message'] = 'InstantTutors#message'
-routes['GET']['/message/<user_id>'] = 'InstantTutors#userMessage'
-routes['POST']['/message/<user_id>/send'] = 'InstantTutors#userMessageSend'
-routes['GET']['/ignore/<user_id>'] = 'InstantTutors#ignore'
-routes['GET']['/cancelrequest/<user_id>'] = 'InstantTutors#cancelRequest'
-routes['GET']['/newwall_json'] = 'InstantTutors#newWall_json'
-routes['GET']['/grabMessages/<user_id>'] = 'InstantTutors#grabMessages'
+routes['default_controller'] = 'Main'
+routes['POST']['/register'] = 'Main#register'
+routes['GET']['/login'] = 'Main#login'
+routes['POST']['/process'] = 'Main#process'
+routes['GET']['/logout'] = 'Main#logout'
+
+routes['GET']['/success'] = 'Main#success'			#FOR DEBUG PURPOSES ONLY!!!!!!!!!!!!!
+
+
+# routes['GET']['/home'] = 'Profile#home'
+# routes['GET']['/calander'] = 'Profile#calender'
+# routes['GET']['/contact'] = 'Profile#contact'
+# routes['GET']['/find'] = 'Profile#find'
+# routes['GET']['/pupil'] = 'Profile#pupil'
+
+
+# routes['GET']['/tutor'] = 'appointment#tutor'
+# routes['GET']['/tutor/<user_id>'] = 'appointment#showprofile'
+# routes['GET']['/tutor/order'] = 'appointment#acceptFriend'
+# routes['GET']['/chat'] = 'appointment#chat'
+# routes['GET']['/tutor/<tutor_id>/review'] = 'appointment#review'
+# routes['GET']['/tutor/<tutor_id>/calender'] = 'appointment#calender'
+# routes['GET']['/tutor/<tutor_id>/review/add'] = 'appointment#add_review'
+# routes['GET']['/tutor/<tutor_id>/review/post'] = 'appointment#post'
+# routes['GET']['/tutor/<tutor_id>/hire'] = 'appointment#hire'
+# routes['GET']['/tutor/<tutor_id>/map'] = 'appointment#map'
+# routes['GET']['/tutor/<tutor_id>/order'] = 'appointment#order'
+# routes['GET']['/tutor/<tutor_id>/appoint'] = 'appointment#appoint'
