@@ -4,6 +4,8 @@ class Main(Model):
     def __init__(self):
         super(Main, self).__init__()
     def register(self, info):
+        print 'zipcode'
+        print info['zipcode']
         EMAIL_REGEX = re.compile(r'^[a-za-z0-9\.\+_-]+@[a-za-z0-9\._-]+\.[a-za-z]*$')
         errors = []
         if not info['first_name']:
@@ -40,7 +42,7 @@ class Main(Model):
                 'first_name' : info['first_name'],
                 'last_name' : info['last_name'],
                 'email' : info['email'],
-                'password' : info['password'],
+                'password' : heshed_pw,
                 'zipcode' : info['zipcode']
             }
             users = self.db.query_db(get_user_query, data)

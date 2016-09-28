@@ -7,7 +7,7 @@ from system.core.router import routes
 
 routes['default_controller'] = 'Main'
 routes['POST']['/register'] = 'Main#register'
-routes['GET']['/login'] = 'Main#login'
+routes['POST']['/login'] = 'Main#login'
 routes['POST']['/process'] = 'Main#process'
 routes['GET']['/logout'] = 'Main#logout'
 
