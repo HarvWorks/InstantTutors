@@ -5,9 +5,9 @@ from system import socketio
 import time
 
 
-class InstantTutors(Controller):
+class Main(Controller):
     def __init__(self, action):
-        super(InstantTutors, self).__init__(action)
+        super(Main, self).__init__(action)
         self.load_model('InstantTutor')
 
     def index(self):
