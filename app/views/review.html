@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>My Face 2.0</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <!-- Latest compiled and minified JavaScript -->
+        <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/static/index.css" type="text/css">
+        <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+
+        <script>
+            $(document).ready(function(){
+                $("[data-toggle=tooltip]").tooltip();
+            });
+
+            $(':radio').change(
+                function(){
+            $('.choice').text( this.value + ' stars' );
+                } 
+            )
+        </script>
+    </head>
+    <body>
+    <div class="col-md-8" style="margin-bottom:10px">
+       <!--  <div class="profile" style= > -->
+            <div class="col-md-2">
+            <img src="http://placehold.it/80x100" alt="" class="img-rounded img-responsive"  />
+            </div>
+            <div class="col-md-4">
+            <h4>Annie Gonzalez</h4>
+                <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+                </i></cite></small>
+            </div>
+            <div class="col-md-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget massa nec turpis congue bibendum. Integer nulla felis, porta suscipit nulla et, dignissim commodo nunc. Morbi a semper nulla.</p>
+            </div>
+        </div>
+        <!-- </div> -->
+        <div class="col-md-8" style="margin-bottom:10px">
+            <div class="col-md-2">
+            <img src="http://placehold.it/80x100" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-md-4">
+            <h4>Joshua Chu</h4>
+                <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+                </i></cite></small>
+            </div>
+            <div class="col-md-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget massa nec turpis congue bibendum. Integer nulla felis, porta suscipit nulla et, dignissim commodo nunc. Morbi a semper nulla.</p>
+            </div>
+        </div>
+        <!-- </div> -->
+        <div class="col-md-8" style="margin-bottom:10px">
+            <div class="col-md-2">
+            <img src="http://placehold.it/80x100" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-md-4">
+            <h4>Bhaumik Patel</h4>
+                <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+                </i></cite></small>
+            </div>
+            <div class="col-md-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget massa nec turpis congue bibendum. Integer nulla felis, porta suscipit nulla et, dignissim commodo nunc. Morbi a semper nulla.</p>
+            </div>
+        </div>
+    </div>
+    <div class="widget-area no-padding blank">
+        <div class="status-upload">
+            <form>
+                <textarea placeholder="Add Reviews" ></textarea>
+                <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i>Share</button>
+            </form>
+        </div><!-- Status Upload  -->
+    </div><!-- Widget Area --> 
+
+    <span class="star-rating">
+        <input type="radio" name="rating" value="1"><i></i>
+        <input type="radio" name="rating" value="2"><i></i>
+        <input type="radio" name="rating" value="3"><i></i>
+        <input type="radio" name="rating" value="4"><i></i>
+        <input type="radio" name="rating" value="5"><i></i>
+    </span>
+    <strong class="choice">Choose a rating</strong> 
+
+    </body>
+</html>
