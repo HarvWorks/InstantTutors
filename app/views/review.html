@@ -9,52 +9,136 @@
         <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/static/index.css" type="text/css">
+        <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+
+        <script>
+            $(document).ready(function(){
+                $("[data-toggle=tooltip]").tooltip();
+            });
+
+            $(':radio').change(
+                function(){
+            $('.choice').text( this.value + ' stars' );
+                } 
+            )
+        </script>
     </head>
     <body>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header" id = "my-navbar-header">
-                    <a class="navbar-brand" href="/">My Face 2.0</a>
-                </div>
-                <ul class="nav navbar-nav navbar-right" id = "my-navbar-right">
-                    <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> &nbsp Log In</a></li>
-                </ul>
+    <h1>Reviews</h1>
+    <div class="col-md-8" style="margin-bottom:10px">
+       <!--  <div class="profile" style= > -->
+            <div class="col-md-2">
+            <img src="http://placehold.it/80x100" alt="" class="img-rounded img-responsive"  />
             </div>
-        </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>Register:</h2>
-                    <form action='/process' method='POST'>
-                        <input type="hidden" name="type" value="register">
-                        <div class="form-group">
-                            <label for="email">Email address:</label> <p class = "error">{{get_flashed_messages(category_filter=["email_err"])[0]}}</p>
-                            <input type="email" name = "email" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="first_name">First Name:</label> <p class = "error">{{get_flashed_messages(category_filter=["first_name_err"])[0]}}</p>
-                            <input type="text" name = "first_name" class="form-control" id="first_name">
-                        </div>
-                        <div class="form-group">
-                            <label for="last_name">Last Name:</label> <p class = "error">{{get_flashed_messages(category_filter=["last_name_err"])[0]}}</p>
-                            <input type="text" name = "last_name" class="form-control" id="last_name">
-                        </div>
-                        <div class="form-group">
-                            <label for="pwd">Password:</label> <p class = "error">{{get_flashed_messages(category_filter=["password_err"])[0]}}</p>
-                            <input type="password" name = "password" class="form-control" id="pwd">
-                        </div>
-                        <div class="form-group">
-                            <label for="confirm">Password Confirmation: </label><p class = "error">{{get_flashed_messages(category_filter=["confirm_err"])[0]}}</p>
-                            <input type="password" name = "confirm" class="form-control" id="confirm">
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox" name = "remember" value = "yes"> Remember me</label>
-                        </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
-                    </form>
-                    <a href="/login">Already Registered?</a>
+            <div class="col-md-4">
+                <h4>Annie Gonzalez</h4>
+                <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+                </i></cite></small>
+                <div class="review-block-date">September 3, 2016</div>
+                <div class="review-block-rate" style="margin-top:10px">
+                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
                 </div>
+            </div>
+            <div class="col-md-8" style="margin-top:10px">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget massa nec turpis congue bibendum. Integer nulla felis, porta suscipit nulla et, dignissim commodo nunc. Morbi a semper nulla.</p><hr>
             </div>
         </div>
+        <!-- </div> -->
+        <div class="col-md-8" style="margin-bottom:10px">
+            <div class="col-md-2">
+            <img src="http://placehold.it/80x100" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-md-4">
+                <h4>Joshua Chu</h4>
+                <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+                </i></cite></small>
+                <div class="review-block-date">September 3, 2016</div>
+                <div class="review-block-rate" style="margin-top:10px">
+                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget massa nec turpis congue bibendum. Integer nulla felis, porta suscipit nulla et, dignissim commodo nunc. Morbi a semper nulla.</p><hr>
+            </div>
+        </div>
+        <!-- </div> -->
+        <div class="col-md-8" style="margin-bottom:10px">
+            <div class="col-md-2">
+            <img src="http://placehold.it/80x100" alt="" class="img-rounded img-responsive" />
+            </div>
+            <div class="col-md-4">
+                <h4>Bhaumik Patel</h4>
+                <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+                </i></cite></small>
+                <div class="review-block-date">August 28, 2016</div>
+                <div class="review-block-rate" style="margin-top:10px">
+                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-warning btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-grey btn-xs" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget massa nec turpis congue bibendum. Integer nulla felis, porta suscipit nulla et, dignissim commodo nunc. Morbi a semper nulla.</p><hr>
+            </div>
+        </div>
+    </div>
+    <div class="widget-area no-padding blank">
+        <div class="status-upload">
+            <form>
+                <textarea placeholder="Leave a review" ></textarea>
+                <button type="submit" class="btn btn-success green">Share</button>
+            </form>
+        </div><!-- Status Upload  -->
+    </div><!-- Widget Area --> 
+
+    <span class="star-rating">
+        <input type="radio" name="rating" value="1"><i></i>
+        <input type="radio" name="rating" value="2"><i></i>
+        <input type="radio" name="rating" value="3"><i></i>
+        <input type="radio" name="rating" value="4"><i></i>
+        <input type="radio" name="rating" value="5"><i></i>
+    </span>
+    <strong class="choice">Choose a rating</strong> 
+
     </body>
 </html>

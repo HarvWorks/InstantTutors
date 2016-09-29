@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/Adam/Documents/Tutor/pylotVenv"
+VIRTUAL_ENV="/Users/dianawang/Desktop/InstantTutors/InstantTutors/pylotVenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
