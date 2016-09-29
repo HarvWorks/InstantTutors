@@ -6,7 +6,7 @@ class Main(Controller):
         self.load_model('Main')
     
     def index(self):
-        return self.load_view('index.html')
+        return self.load_view('Main/index.html')
 
     def login(self):
 
@@ -24,20 +24,21 @@ class Main(Controller):
             session['id'] = login_status['user']['id'] 
             session['first_name'] = login_status['user']['first_name']
             session['last_name'] = login_status['user']['last_name']
-            return redirect('/success')
+            url = '/home/'+session['id']
+            return redirect(url)
         else:
             message = 'Incorrect password/email combination'
             flash(message)
-            return self.load_view('index.html')
+            return self.load_view('Main/index.html')
 
-    def success(self):                                                  #this will be home
-        print 'success page loding'
-        return self.load_view('success.html')
+    # def success(self):                                                  #this will be home
+    #     print 'success page loding'
+    #     return self.load_view('Main/success.html')
 
     print 'method to display registration page'
 
     def register(self):                                                  
-        return self.load_view('new.html')
+        return self.load_view('Main/new.html')
 
     print 'method to create a user'
     def process(self):
@@ -60,13 +61,14 @@ class Main(Controller):
             session['first_name'] = create_status['user']['first_name']
             session['last_name'] = create_status['user']['last_name']
             print 'we can redirect to the users profile page here'
-            return redirect('/success')
+            url = '/home/'+session['id']
+            return redirect(url)
         else:
             print 'set flashed error messages here from the error messages we returned from the Model'
             for message in create_status['errors']:
                 flash(message, 'regis_errors')
             print 'redirect to the method that renders the form'
-            return self.load_view('new.html')
+            return self.load_view('Main/new.html')
 
     def logout(self):
         print "start logout"

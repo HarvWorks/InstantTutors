@@ -1,0 +1,23 @@
+<html lang = 'en'>
+<head>
+  <title>Calender</title>
+</head>
+<body>
+	<h1>Calender</h1>
+	<hr>
+	<h2>Skype apt</h2>
+	<hr>
+	{% for info in skype %}
+		<p>{{ skype[info] }}</p>
+	{% endfor %}
+	<hr>
+	<h2>travel apt</h2>
+	<hr>
+	{% for info in travel %}
+		<p>{{ skype[info] }}</p>
+	{% endfor %}
+	<hr>
+	<form action="/home/{{ user_id }}"><input type="" name=""></form>
+</body>
+</body>
+</html>

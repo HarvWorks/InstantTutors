@@ -11,11 +11,11 @@ routes['POST']['/login'] = 'Main#login'
 routes['POST']['/process'] = 'Main#process'
 routes['GET']['/logout'] = 'Main#logout'
 
-routes['GET']['/success'] = 'Main#success'			#FOR DEBUG PURPOSES ONLY!!!!!!!!!!!!!
+#routes['GET']['/success'] = 'Main#success'			#FOR DEBUG PURPOSES ONLY!!!!!!!!!!!!!
 
 
-# routes['GET']['/home'] = 'Profile#home'
-# routes['GET']['/calander'] = 'Profile#calender'
+routes['GET']['/home/<user_id>'] = 'Profile#home'
+routes['GET']['/calander/<user_id>'] = 'Profile#calender'
 # routes['GET']['/contact'] = 'Profile#contact'
 # routes['GET']['/find'] = 'Profile#find'
 # routes['GET']['/pupil'] = 'Profile#pupil'

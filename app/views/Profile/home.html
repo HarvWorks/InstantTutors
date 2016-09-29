@@ -1,0 +1,17 @@
+<html lang = 'en'>
+<head>
+  <title>{{ user['username'] }}</title>
+</head>
+<body>
+	<h1>{{ user['full_name'] }}'s Profile</h1>
+	<hr>
+	<p>picture {{ user['picture'] }}</p>
+	<p>Description: {{ user['description'] }}</p>
+	<p>Email: {{ user['email'] }}</p>
+	<p>ZipCode: {{ user['email'] }}</p>
+	<form  action="/calander/{{ user['id'] }}"><input type="submit" value="Callender"></form>
+	<form  action="/contact"><input type="submit" value="Contact current Tutor"></form>
+	<form  action="/find"><input type="submit" value="Find a Tutor"></form>
+</body>
+</body>
+</html>
